@@ -9,6 +9,7 @@ package chain;
 public class SaleSecurityCheck extends SaleHandler {
     @Override
     public boolean sale(String user, String customer, SaleModel saleModel) {
+        System.out.println("1.权限检查");
         //进行权限检查，简单点，就小李能通过
         if ("小李".equals(user)) {
             return this.successor.sale(user, customer, saleModel);

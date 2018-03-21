@@ -9,6 +9,7 @@ import org.apache.commons.lang3.StringUtils;
 public class SaleDataCheck extends SaleHandler{
     @Override
     public boolean sale(String user, String customer, SaleModel saleModel) {
+        System.out.println("2.数据检查");
         if(StringUtils.isBlank(user)||StringUtils.isBlank(customer)
                 ||saleModel==null){
             System.out.println("入参不能为空");
